@@ -1,0 +1,21 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    "messages": {
+      "$messageId": {
+        ".write": "!data.exists()",
+        "user": {
+           ".validate": "newData.val() === auth.uid"
+        },
+        "userEmail": {
+           ".validate": "newData.val() === auth.email"
+        }
+      }
+    },
+    "users": {
+      "$userId": {
+        ".write": "!data.exists()"
+      }
+    }
+  }
+}
