@@ -1,0 +1,64 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 app-header">
+            <span class="logo">ChatRoomApp</span>
+
+            <span class="user">{{loggedUser}}</span>
+
+            <a href="" ng-click="logout()">Logout</a>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span>People online</span>
+                </div>
+                <div class="panel-body">
+
+                    <div class="row active-people-row" ng-repeat="user in users">
+                        <div class="col-xs-12">
+                            <span>{{user.email}}</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8">
+            <div class="panel panel-info chat-panel">
+                <div class="panel-heading">
+                    <span>Chat room</span>
+                </div>
+                <div class="panel-body">
+
+                    <div class="row message-row" ng-repeat="message in messages">
+                        <div class="col-xs-12">
+                            <span class="user-name">{{message.userEmail}}</span> - <span class="message-time">{{message.date}}</span>
+                            <p>{{message.text}}</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+                    <form ng-submit="sendMessage()">
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <input name="messageText" class="form-control" type="text" ng-model="messageText">
+                            </div>
+                            <div class="col-xs-4">
+                                <button class="btn btn-success" type="submit" name="send">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

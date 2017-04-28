@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="chatRoomsApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chat App</title>
+
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/3.9.0/firebase-app.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/3.9.0/firebase-auth.js"></script>
+        <script defer src="/__/firebase/3.9.0/firebase-database.js"></script>
+        <script defer src="/__/firebase/3.9.0/firebase-messaging.js"></script>
+        <script defer src="/__/firebase/3.9.0/firebase-storage.js"></script>
+        <!-- initialize the SDK after all desired features are loaded -->
+        <script defer src="/__/firebase/init.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/style/css/helpers/helpers.css">
+
+    </head>
+    <body ng-controller="MainController">
+
+        <div class="app-container">
+            <ng-view></ng-view>
+        </div>
+
+        <!-- Libs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" charset="utf-8"></script>
+
+        <!-- Angular scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js" charset="utf-8"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js" charset="utf-8"></script>
+
+        <!-- Modules -->
+        <script src="app/chatRoomsApp.module.js" charset="utf-8"></script>
+        <script src="core/config/route.config.js" charset="utf-8"></script>
+
+        <script src="app/main/main.module.js" charset="utf-8"></script>
+        <script src="app/login/login.module.js" charset="utf-8"></script>
+        <script src="app/register/register.module.js" charset="utf-8"></script>
+        <script src="app/chat/chat.module.js" charset="utf-8"></script>
+
+        <!-- Services -->
+        <script src="core/services/common/helpers.service.js" charset="utf-8"></script>
+        <script src="core/services/firebase/Fire.service.js" charset="utf-8"></script>
+        <script src="core/services/firebase/Auth.service.js" charset="utf-8"></script>
+        <script src="core/services/firebase/Db.service.js" charset="utf-8"></script>
+        <script src="core/services/firebase/Data.service.js" charset="utf-8"></script>
+
+        <!-- Controllers -->
+        <script src="app/main/main.controller.js" charset="utf-8"></script>
+        <script src="app/login/login.controller.js" charset="utf-8"></script>
+        <script src="app/register/register.controller.js" charset="utf-8"></script>
+        <script src="app/chat/chat.controller.js" charset="utf-8"></script>
+
+        <!-- Directives -->
+
+    </body>
+</html>

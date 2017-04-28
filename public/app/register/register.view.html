@@ -1,0 +1,53 @@
+<div class="row mt30">
+    <div class="col-xs-10 col-md-6 col-xs-offset-1 col-md-offset-3">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                Register
+            </div>
+            <div class="panel-body">
+                <form ng-submit="register()">
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label>E-mail:</label>
+                        </div>
+                        <div class="col-xs-12">
+                            <input type="text" name="email" class="form-control" ng-model="email" placeholder="E-mail">
+                        </div>
+                    </div>
+
+                    <div class="row mt10">
+                        <div class="col-xs-12">
+                            <label>Password:</label>
+                        </div>
+                        <div class="col-xs-12">
+                            <input type="password" name="password" class="form-control" ng-model="password" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="row mt10">
+                        <div class="col-xs-12">
+                            <label>Retype password:</label>
+                        </div>
+                        <div class="col-xs-12">
+                            <input type="password" name="passwordRetype" class="form-control" ng-model="passwordRetype" placeholder="Password Retype">
+                        </div>
+                    </div>
+
+                    <div class="row mt10">
+                        <div class="col-xs-12 text-center">
+                            <button class="btn btn-success" type="submit" name="registerUser">Register</button>
+                        </div>
+                    </div>
+
+                    <div class="row mt10">
+                        <div class="col-xs-12 text-center">
+                            <p>Have an account already? <a href="#/login">Go to login</a></p>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
